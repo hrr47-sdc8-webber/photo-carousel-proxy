@@ -6,12 +6,12 @@
   "author": "Cinzia Borello",
   "license": "ISC",
   "engines": {
-      "node": ">=6.13.0"
+    "node": ">=6.13.0"
   },
   "scripts": {
     "start": "node server/index.js"
   },
-    "dependencies": {
-      "express": "^4.17.1"
-    }
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
