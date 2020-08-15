@@ -1,15 +1,17 @@
 {
-  "name": "zagat-similar-restaurants-module",
-  "version": "1.0",
-  "description": "this module show similar restaurant to the one displayed on a page",
+  "name": "cinzia-zigat-proxy",
+  "version": "1.0.0",
+  "description": "This is my proxy to bring all zigat modules together.",
+  "main": "server/index.js",
   "author": "Cinzia Borello",
-  "license": "",
+  "license": "ISC",
   "engines": {
-    "node": ">=6.13.0"
+      "node": ">=6.13.0"
   },
-  "scripts": {},
-  "dependencies": {},
-  "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
-  }
+  "scripts": {
+    "start": "node server/index.js"
+  },
+    "dependencies": {
+      "express": "^4.17.1"
+    }
 }
