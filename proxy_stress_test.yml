@@ -1,0 +1,26 @@
+config:
+  target: "http://localhost:3000"
+  processor: "./generateRandomId.js"
+  phases:
+    - duration: 20
+      arrivalRate: 1
+      name: Warm up
+      maxVusers: 10
+    - duration: 40
+      arrivalRate: 10
+      name: Max load
+      maxVusers: 20
+    - duration: 60
+      arrivalRate: 100
+      name: Max load
+      maxVusers: 100
+
+scenarios:
+  - name: "Search restaurants"
+    flow:
+      - loop:
+        - function: "generateRandomData"
+        - get:
+            # url: "/1/"
+            url: "/{{ id }}"
+        count: 10
